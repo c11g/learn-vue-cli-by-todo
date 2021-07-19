@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import InputTodo from '@/components/InputTodo';
-import List from '@/components/List';
+import InputTodo from '@/components/todolist/InputTodo';
+import List from '@/components/todolist/List';
 
 export default {
   name: 'todo-list',

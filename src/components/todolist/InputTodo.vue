@@ -11,21 +11,21 @@
 </template>
 
 <script>
-import eventBus from '@/components/EventBus';
+import CONSTANT from '@/constant';
 
 export default {
   name: 'input-todo',
   data(){
     return {
       input: '',
-    }
+    };
   },
   methods: {
     updateInput(){
       if(!this.input) return;
-      eventBus.$emit('add-todo', this.input);
+      this.$store.dispatch(CONSTANT.ADD_TODO, {id: Date.now(), text: this.input, done: false});
       this.input = '';
-    }
+    },
   }
 }
 </script>
